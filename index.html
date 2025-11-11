@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Name</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Homepage of Your Name.">
+  <!-- Clean, academic-ish font -->
+  <link href="https://fonts.googleapis.com/css2?family=Cantarell:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* ====== GLOBAL ====== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Cantarell", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #ffffff;
+      color: #222222;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #c0392b;            /* red links like template */
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* ====== LAYOUT ====== */
+    .page {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 40px;
+      display: flex;
+    }
+
+    /* Left sidebar */
+    .sidebar {
+      width: 230px;
+      padding-right: 40px;
+      border-right: 1px solid #eeeeee;
+    }
+
+    .name-block {
+      margin-bottom: 24px;
+    }
+
+    .name-block span.bar {
+      display: inline-block;
+      width: 3px;
+      height: 26px;
+      background: #000000;
+      margin-right: 6px;
+      vertical-align: -4px;
+    }
+
+    .name-block span.first {
+      font-weight: 700;
+      font-size: 26px;
+      letter-spacing: 0.5px;
+    }
+
+    .name-block span.last {
+      font-weight: 300;
+      font-size: 26px;
+      margin-left: 4px;
+    }
+
+    .profile-photo {
+      width: 180px;
+      height: auto;
+      margin-bottom: 20px;
+      object-fit: cover;
+      border: 1px solid #dddddd;
+    }
+
+    .sidebar-links {
+      list-style: none;
+      font-size: 14px;
+      margin-top: 6px;
+    }
+
+    .sidebar-links li {
+      margin-bottom: 4px;
+    }
+
+    /* Right main content */
+    .content {
+      flex: 1;
+      padding-left: 40px;
+      font-size: 15px;
+    }
+
+    .content p {
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 400;
+      color: #c0392b; /* red section titles */
+      margin-top: 30px;
+      margin-bottom: 8px;
+    }
+
+    .news-list,
+    .pub-list {
+      list-style: none;
+      font-size: 14px;
+    }
+
+    .news-list li {
+      margin-bottom: 4px;
+    }
+
+    .pub-item {
+      margin-bottom: 14px;
+    }
+
+    .pub-title {
+      font-weight: 700;
+      color: #c0392b;
+      display: block;
+    }
+
+    .pub-authors {
+      display: block;
+    }
+
+    .pub-venue {
+      font-size: 13px;
+      color: #666666;
+    }
+
+    @media (max-width: 800px) {
+      .page {
+        flex-direction: column;
+        padding: 0 20px;
+      }
+
+      .sidebar {
+        width: 100%;
+        border-right: none;
+        padding-right: 0;
+        margin-bottom: 24px;
+      }
+
+      .content {
+        padding-left: 0;
+      }
+
+      .profile-photo {
+        width: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ====== LEFT: NAME / PHOTO / LINKS ====== -->
+  <aside class="sidebar">
+    <div class="name-block">
+      <span class="bar"></span>
+      <span class="first">YourFirstName</span>
+      <span class="last">YourLastName</span>
+    </div>
+
+    <!-- put your own image as me.jpg in the repo, or change src -->
+    <img src="me.jpg" alt="Your Name" class="profile-photo">
+
+    <ul class="sidebar-links">
+      <li><a href="cv.pdf" target="_blank">curriculum vitae</a></li>
+      <li><a href="https://scholar.google.com/" target="_blank">google scholar</a></li>
+      <li><a href="mailto:your.email@example.com">email address</a></li>
+      <li><a href="https://github.com/your-username" target="_blank">github profile</a></li>
+      <li><a href="https://www.linkedin.com/in/your-handle" target="_blank">linkedin</a></li>
+      <li><a href="https://twitter.com/your-handle" target="_blank">twitter</a></li>
+    </ul>
+  </aside>
+
+  <!-- ====== RIGHT: MAIN CONTENT ====== -->
+  <main class="content">
+    <!-- Intro -->
+    <p>
+      I am a [your role: e.g., PhD student / Researcher / Engineer] in the [Department / Lab] at
+      [University / Company]. My research interests include [area 1], [area 2], and [area 3].
+    </p>
+
+    <p>
+      Previously, I [short bio: past positions, labs, advisors, key topics]. Use 2–3 sentences here
+      to summarize your path and what you work on.
+    </p>
+
+    <p>
+      As an undergraduate at [place], I worked with [people/groups] on [short description].
+    </p>
+
+    <!-- News -->
+    <h2>News</h2>
+    <ul class="news-list">
+      <li><strong>Aug 2024</strong> | [Your recent news / achievement]</li>
+      <li><strong>Jun 2024</strong> | [Another update]</li>
+      <li><strong>Jan 2024</strong> | [Paper / talk / award]</li>
+      <li><strong>Dec 2023</strong> | [Anything relevant]</li>
+    </ul>
+
+    <!-- Publications -->
+    <h2>Publications / Preprints</h2>
+
+    <div class="pub-list">
+      <div class="pub-item">
+        <span class="pub-title">
+          Title of Your Paper One
+        </span>
+        <span class="pub-authors">
+          Your Name, Coauthor A, Coauthor B
+        </span>
+        <span class="pub-venue">
+          Conference / Journal, Year · <a href="#">paper</a> · <a href="#">code</a> · <a href="#">preprint</a>
+        </span>
+      </div>
+
+      <div class="pub-item">
+        <span class="pub-title">
+          Title of Your Paper Two
+        </span>
+        <span class="pub-authors">
+          Your Name, Coauthor A, Coauthor B
+        </span>
+        <span class="pub-venue">
+          Conference / Journal, Year · <a href="#">paper</a> · <a href="#">code</a>
+        </span>
+      </div>
+
+      <!-- add more pub-item blocks as needed -->
+    </div>
+
+  </main>
+</div>
+</body>
+</html>
